@@ -16,7 +16,7 @@ START TRANSACTION;
 -- And some data should be created inside the transaction 
 SET @OrderID = LAST_INSERT_ID();
 
-INSERT INTO OrdersItems(OrderID, ProductID, Count)
+INSERT INTO OrderItems(OrderID, ProductID, Count)
     VALUES (@OrderID, 1, 1);
 
 UPDATE Products 
